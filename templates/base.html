@@ -1,0 +1,297 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from preview.colorlib.com/theme/cakeshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 May 2022 06:42:30 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon/xfavicon.png.pagespeed.ic.jILojjAr1o.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"
+          integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'css/style2.css.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <script nonce="d56a2398-23d2-42c7-babf-f7e2e8e9b9ec">(function (w, d) {
+        !function (a, e, t, r) {
+            a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = {deferred: []}, a.zaraz.q = [], a.zaraz._f = function (e) {
+                return function () {
+                    var t = Array.prototype.slice.call(arguments);
+                    a.zaraz.q.push({m: e, a: t})
+                }
+            };
+            for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e);
+            a.addEventListener("DOMContentLoaded", (() => {
+                var t = e.getElementsByTagName(r)[0], z = e.createElement(r), n = e.getElementsByTagName("title")[0];
+                for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) {
+                    const e = a.zaraz.q.shift();
+                    a.zarazData.q.push(e)
+                }
+                z.defer = !0;
+                for (const e of [localStorage, sessionStorage]) Object.keys(e).filter((a => a.startsWith("_zaraz_"))).forEach((t => {
+                    try {
+                        a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t))
+                    } catch {
+                        a.zarazData["z_" + t.slice(7)] = e.getItem(t)
+                    }
+                }));
+                z.referrerPolicy = "origin", z.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t)
+            }))
+        }(w, d, 0, "script");
+    })(window, document);</script>
+</head>
+<body class="body-bg">
+<header>
+    <div class="header-area">
+        <div class="main-header ">
+            <div class="header-top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-between flex-wrap align-items-center">
+                                <div class="header-info-left d-none d-sm-block">
+                                    <ul class="header-social">
+                                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="logo">
+                                    <a href="index-2.html"><img
+                                            src="assets/img/logo/xlogo.png.pagespeed.ic.xm-XFuawlp.png" alt=""></a>
+                                </div>
+                                <div class="header-info-right d-none d-lg-block">
+                                  <div class="row">
+                                     <div class="col-sm-8">
+                                        <a href="#" class="btn_2">Call Us: +10 783 346 4378</a>
+                                     </div>
+                                     <div class="col-lg-4">
+                                        <!-- Languages -->
+                                        {% if user.is_authenticated %}
+                                            <li class="dropdown search dropdown-slide">
+                                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown"
+                                                   data-hover="dropdown"><i
+                                                        class="fas fa-user"></i>Welcome {{ request.user }}</a>
+                                                <ul class="dropdown-menu search-dropdown">
+                                                    <li>
+                                                        <a href="/logout">
+                                                            <button type="button" class="btn btn-dark">logout</button>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                        {% else %}
+                                            <li class="login">
+                                                <a href="/login" style="text-decoration: none; color: white;"><i class="fas fa-user"></i>Login</a>
+                                            </li><!-- / Languages -->
+                                        {% endif %}
+
+                                        </ul><!
+                                     </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12">
+
+                            <div class="main-menu d-none d-lg-block text-center">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/cakes/">Cakes</a></li>
+                                        <li><a href="/about/">About</a></li>
+                                        <li><a href="/blog/">Blog</a>
+                                        <li><a href="/contact/">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% block body %}{% endblock %}
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-menu d-flex justify-content-between flex-wrap">
+                            <div class="logo">
+                                <img src="assets/img/logo/xlogo.png.pagespeed.ic.xm-XFuawlp.png" alt="">
+                            </div>
+                            <nav>
+                                <ul>
+                                    <li><a href="index-2.html">Home</a></li>
+                                    <li><a href="cakes.html">Cakes</a></li>
+                                    <li><a href="/about/">About</a></li>
+                                    <li><a href="blog.html">blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-10">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>Consectetur adipiscing elit, sed do eiusmod tempor dunt ut labore et dolore
+                                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco
+                                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                </div>
+
+                                <div class="socila mt-50">
+                                    <a href="#" class="btn_02"><i class="fab fa-instagram"></i>Instagram</a>
+                                    <a href="https://bit.ly/sai4ull" class="btn_02"><i class="fab fa-facebook-f"></i>Facebook</a>
+                                    <a href="#" class="btn_02"><i class="fab fa-twitter"></i>Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <img src="assets/img/icon/location.svg" alt="">
+                                <h4>Location</h4>
+                                <ul>
+                                    <li>
+                                        <p>4736 Poe Lane, HOT SPRINGS, Montana-59845</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <img src="assets/img/icon/phone.svg" alt="">
+                                <h4>Contact</h4>
+                                <ul>
+                                    <li><a href="#">913-473-7000</a></li>
+                                    <li><p><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
+                                              class="__cf_email__"
+                                              data-cfemail="8cefe3e2f8edeff8ccefede7e9ffe4e3fca2efe3e1">[email&#160;protected]</a>
+                                    </p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>Copyright &copy;<script data-cfasync="false"
+                                                           src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                                    <script>document.write(new Date().getFullYear());</script>
+                                    All rights reserved | This template is made with <i class="fa fa-heart color-danger"
+                                                                                        aria-hidden="true"></i> by <a
+                                            href="https://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="back-top">
+    <a class="wrapper" title="Go to Top" href="#">
+        <div class="arrows-container">
+            <div class="arrow arrow-one">
+            </div>
+            <div class="arrow arrow-two">
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="assets/js/popper.min.js%2bbootstrap.min.js.pagespeed.jc.TBjnucQRqR.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+<script>eval(mod_pagespeed_u1gUoaaXE_);</script>
+<script>eval(mod_pagespeed_WbDF3cxKq2);</script>
+
+<script src="assets/js/owl.carousel.min.js%2bslick.min.js.pagespeed.jc.4RHvWKSN_e.js"></script>
+<script>eval(mod_pagespeed_EGtkiJIjgo);</script>
+<script>eval(mod_pagespeed_aW86gGmi7t);</script>
+<script src="assets/js/jquery.slicknav.min.js%2bwow.min.js%2bjquery.magnific-popup.js%2bjquery.nice-select.min.js%2bjquery.counterup.min.js%2bwaypoints.min.js%2bcontact.js.pagespeed.jc.VsnzaB4Hf-.20.delay"></script>
+<script>eval(mod_pagespeed_cKOtDbjEuP);</script>
+
+<script>eval(mod_pagespeed_u4y0KggLas);</script>
+<script>eval(mod_pagespeed_byRrNsFTKW);</script>
+<script>eval(mod_pagespeed_$tj8V37S2T);</script>
+<script>eval(mod_pagespeed_$9VIVt5dIU);</script>
+<script>eval(mod_pagespeed_u24H4jdFDn);</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/v4-shims.min.js"
+        integrity="sha512-pd9YFLsGdZIRG1ChLLdpxgGT+xR7rVjsHqm6RP0toUadPB4XZZ7LlqzX3IhnpMd2Cb8b2s8yVFwY21epgr84qw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>eval(mod_pagespeed_0SlrTlmba0);</script>
+<script src="assets/js/jquery.form.js%2bjquery.validate.min.js%2bmail-script.js%2bjquery.ajaxchimp.min.js%2bplugins.js%2bmain.js.pagespeed.jc.xUY6pkFGEX.js"></script>
+<script>eval(mod_pagespeed_3CrgPEMOVf);</script>
+<script>eval(mod_pagespeed_Ab8QQTG9HF);</script>
+<script>eval(mod_pagespeed_BvxqohQf6X);</script>
+<script>eval(mod_pagespeed_alCOU$MPeX);</script>
+
+<script>eval(mod_pagespeed_aTXhT9fsuN);</script>
+<script>eval(mod_pagespeed_SFofWDl9tu);</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+        data-cf-beacon='{"rayId":"71040d31af646e4c","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/cakeshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 May 2022 06:42:52 GMT -->
+</html>
